@@ -13,4 +13,4 @@ fs.promises.readdir(path.resolve(__dirname, 'styles'), {withFileTypes: true})
 				stream.on('data', (chunk) => outputFile.write(data += chunk + '\n'));
 			}
 		});
-	})
+	});
