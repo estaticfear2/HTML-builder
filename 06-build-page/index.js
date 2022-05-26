@@ -25,7 +25,7 @@ const copyStyles = () => {
   fs.promises.readdir(path.resolve(__dirname, 'styles'), {withFileTypes: true})
     .then((files) => {
       files.forEach((file) => {
-        if (file.isFile() && file.name.split('.')[1] === 'css') {
+        if (file.isFile() && path.extname(file.name) === '.css') {
           const stream = fs.createReadStream(path.resolve(__dirname, 'styles', file.name));
           let data = '';
 
